@@ -2,7 +2,7 @@
 @use 'variaveis'; 
 @use 'conteudo'; 
 @use 'footer'; 
-
+@use 'menu-burger'; 
 
 *{
     padding: 0;
@@ -13,6 +13,11 @@
     font-family: 'Mulish', sans-serif;
 }
 
+html, body{
+    position: relative;
+    overflow: hidden;
+}
+
 body{
     height: 100vh;
     background: linear-gradient(90deg, #000, #000D 35%, #0000 ),url(../images/homem-de-ferro-1.png) ;
@@ -21,6 +26,12 @@ body{
     padding: 80px 128px 50px 128px;
     display: flex;
     flex-direction: column;
+    background-position: right;
+
+    @media(max-width: 768px){
+        padding: 30px 30px 25px 30px;
+
+    }
 
 }
 
@@ -50,4 +61,3 @@ body{
     transform: translateY(40px);
     color:variaveis.$corTextoPrincipal;
 }
-

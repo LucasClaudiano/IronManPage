@@ -8,4 +8,31 @@
         gap: 40px;
         
     }
+    @media(max-width: 768px){
+        &__links{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem; 
+            gap: 65px;
+            background-color: black;
+            transform:translateX(100%);
+            opacity: 0;
+            z-index: 1;
+            transition: all 1s;
+        }
+
+        .header__links__item.active .header__links{
+            opacity: 1;
+        }
+}
+}
+.opacity{
+    opacity: 1;
+    transform: translateX(0%);
 }

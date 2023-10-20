@@ -11,16 +11,31 @@
             flex-direction: column;
             justify-content: center;
             font-weight: 400;
+
+            @media (max-width:768px){
+                font-size: 74px;
+                .text-span{
+                    padding-bottom: 20px;
+                }
+            }
     
             &_movie{
             font-size: 47px;
             color: variaveis.$corTextoSecundario;
             font-weight: 300px;
+
+            @media (max-width:768px){
+                font-size: 35px;
+            }
             }
         }
         &_movie_text{
             width: 550px;
-            font-weight: 300
+            font-weight: 300;
+
+            @media (max-width:768px){
+                display: none;
+            }
         }
         &_button{
             display:flex;
@@ -34,6 +49,12 @@
             font-size: 24px;
             font-weight: 200;
             margin-top: 30px;
+
+            @media (max-width:768px){
+                font-size: 18px;
+                width: 200px;
+                height: 65px;
+            }
         }
     
     }
@@ -44,7 +65,11 @@
         align-items: center;
         height: 100%;
         width: 48px;
-        
+
+        @media (max-width:768px){
+            display: none;
+        }
+
         
         &_items{
             height: 48px;
@@ -56,6 +81,7 @@
             align-items: center;
             margin: 20px;
             transition:all 1s;
+            
             &:hover{
                 background-color: variaveis.$corTextoSecundario;
                 border-color: variaveis.$corTextoSecundario;
