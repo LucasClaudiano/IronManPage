@@ -2,6 +2,13 @@
 .conteudo_principal{
     display: flex; 
     flex-grow: 1;
+
+    @media (max-width:768px){
+        display: flex;
+        flex-direction: column;
+        
+    }
+
     .conteudo{
         color: variaveis.$corTextoPrincipal;
         flex-grow: 1;
@@ -66,10 +73,20 @@
         height: 100%;
         width: 48px;
 
-        @media (max-width:768px){
-            display: none;
+        &__ul{
+            @media (max-width:768px){
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
         }
 
+        @media (max-width:768px){
+            height: 48px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
         
         &_items{
             height: 48px;
@@ -81,6 +98,7 @@
             align-items: center;
             margin: 20px;
             transition:all 1s;
+            color: white;
             
             &:hover{
                 background-color: variaveis.$corTextoSecundario;
